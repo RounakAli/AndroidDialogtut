@@ -19,7 +19,20 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportActionBar?.hide()
+        this.supportActionBar?.hide()
+
+        binding.time.setOnClickListener {
+
+            val intent=Intent(this,Time_Date_Dialog::class.java)
+            startActivity(
+                intent
+            )
+            finish()
+        }
+
+        binding.prog.setOnClickListener {
+//            val intent = Intent(this,)
+        }
 
         binding.btn1.setOnClickListener {
 
